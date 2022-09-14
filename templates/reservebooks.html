@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Books</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+</head>
+<body style="text-align: center; background-color: palegreen;">
+    <br>
+    <div>
+        <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600">Reserve Books</h1>
+    </div>
+    <br><br>
+    <div class="flex justify-center items-center">
+        <form action="" method="post" class="w-full max-w-lg">
+            {% csrf_token %}
+            <div class="flex justify-around px-5 py-3">
+                <label for="book_isbn" class="w-[150px] font-bold">Book ISBN</label>
+                <input type="text" name="book_isbn" id="book_isbn" placeholder="Enter book isbn" class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <div class="flex justify-around px-5 py-3">
+                <label for="user_email" class="w-[150px] font-bold">Guest User Email</label>
+                <input type="email" name="user_email" id="user_email" placeholder="Enter your email" class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <div class="flex justify-around px-5 py-3">
+                <label for="phono" class="w-[150px] font-bold">Phone Number</label>
+                <input type="number" name="phono" id="phono" placeholder="Enter phone no." class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <div class="flex justify-around px-5 py-3">
+                <label for="user_name" class="w-[150px] font-bold">Guest User Name</label>
+                <input type="text" name="user_name" id="user_name" placeholder="Enter user name" class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <br>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Reserve</button>
+            </div>
+            
+        </form>
+    </div>
+    <br>
+    <button onclick= "location.href='/guest/'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Go Back</button>
+    
+</body>
+</html>

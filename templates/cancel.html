@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+</head>
+<body style="text-align: center; background-color: palegreen;">
+    <br>
+    <div>
+        <h1 class="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600">Cancel Reservation</h1>
+    </div>
+    <br><br>
+    <div class="flex justify-center items-center">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="flex justify-around px-5 py-3">
+                <label for="reser_id" class="w-[150px] font-bold">Reservation ID</label>
+                <input type="text" name="reser_id" id="reser_id" placeholder="Enter reservation id" class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <div class="flex justify-around px-5 py-3">
+                <label for="user_email" class="w-[150px] font-bold">Email ID</label>
+                <input type="email" name="user_email" id="user_email" placeholder="Enter your email" class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <div class="flex justify-around px-5 py-3">
+                <label for="phono" class="w-[150px] font-bold">Phone Number</label>
+                <input type="number" name="phono" id="phono" placeholder="Enter phone no." class ="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name">
+            </div>
+            <br>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Cancel</button>
+        </form>
+    </div>
+    <br>
+    <button onclick= "location.href='/guest/'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Go Back</button>
+    
+</body>
+</html>
