@@ -19,6 +19,7 @@ from books.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", re_direct),
     path("guest/", home),
     path("guest/viewbooks/", viewbooks),
     path("guest/reservebooks/", reservebooks),

@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from books.models import Book, User
 from django.http import HttpResponse, HttpResponseRedirect
-
+from django.shortcuts import redirect
 # Create your views here.
+
+
+def re_direct(request):
+    response = redirect('guest/')
+    return response
 
 
 def home(request):
