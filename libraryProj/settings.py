@@ -74,11 +74,8 @@ WSGI_APPLICATION = "libraryProj.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+try:
+    DATABASES = {
     "default": {
         "ENGINE": "djongo",
         "NAME": "LIBRARYDB",
@@ -90,7 +87,25 @@ DATABASES = {
             "authMechanism": "SCRAM-SHA-1",
         },
     }
-}
+    }
+except:
+        DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    "default": {
+        "ENGINE": "djongo",
+        "NAME": "LIBRARYDB",
+        "CLIENT": {
+            "host": "mongodb+srv://nithin:twocreditcourse@cluster0.6vghoop.mongodb.net/test",
+            "username": "nithin",
+            "password": "twocreditcourse",
+            "authSource": "admin",
+            "authMechanism": "SCRAM-SHA-1",
+        },
+    }
+    }
 
 
 # Password validation
